@@ -19,7 +19,7 @@ public class Osszetett {
         char valasz = 0;
         do{
         //2.tömb hossza
-            int darabszam = (int) (Math.random() * 10) + 30;
+            int darabszam = (int) (Math.random() * 10) + 20;
         //1. két tömb létrehozása
         int szamok1[] = new int[darabszam];
         int szamok2[] = new int[darabszam];
