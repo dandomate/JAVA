@@ -25,8 +25,8 @@ public class Osszetett {
         int szamok2[] = new int[darabszam];
         //3. tömb értékei
         for (int i = 0; i < darabszam; i++) {
-            szamok1[i] = (int) (Math.random() * -50) + 50;
-            szamok2[i] = (int) (Math.random() * -50) + 50;
+            szamok1[i] = (int) (Math.random() * 100) - 50;
+            szamok2[i] = (int) (Math.random() * 100) - 50;
         }
         //4.A két tömb kiiratása
         System.out.println("\nA szamok1 tömb elemei: ");
@@ -42,10 +42,10 @@ public class Osszetett {
         int ujTomb[] = new int[darabszam];
         int ujTombdb = 0;
         for (int i = 0; i < darabszam; i++) {
-            if ((szamok1[i] % 5 == 0) && (szamok1[i]%2==0)) {
+            if ((szamok1[i] % 5 == 0) && (szamok1[i]%2==0)&&(szamok1[i]!=0)) {
                 ujTomb[ujTombdb++] = szamok1[i];
             }
-            if ((szamok2[i] % 5 == 0) && (szamok2[i]%2==0)) {
+            if ((szamok2[i] % 5 == 0) && (szamok2[i]%2==0)&&(szamok2[i]!=0)) {
                 ujTomb[ujTombdb++] = szamok2[i];
             }
 
@@ -79,9 +79,15 @@ public class Osszetett {
         //8.Tartalmaz-e nullát
         for (int i = 0; i < ujTombdb; i++) {
             if (ujTomb[i] == 0) {
-                System.out.println("Az ujTomb 0-t tartalmaz");
+                System.out.println("\nAz ujTomb 0-t tartalmaz");
             }
-        }   
+            else{
+                System.out.println("\nAz ujTomb nem tartalmaz 0-t");
+                break;
+            }
+        }
+        
+        
         //9.Futtatni akarod még 1x?
             System.out.print("\nSzeretné újra lefuttatni a programot? i/n: ");
             valasz = bemenet.next().charAt(0);
