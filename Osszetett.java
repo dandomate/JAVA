@@ -67,8 +67,10 @@ public class Osszetett {
         }
             System.out.println("");
         //6.Legkisebb, legnagyobb szám
-        System.out.println("\nA legkisebb szám az ujTomb-ben: "+ujTomb[0]);
-        System.out.println("A legnagyobb szám az ujTomb-ben: "+ujTomb[ujTombdb-1]);
+        int legnagyobb=ujTomb[0];
+        int legkisebb=ujTomb[ujTombdb-1];
+        System.out.println("\nA legkisebb szám az ujTomb-ben: "+legnagyobb);
+        System.out.println("A legnagyobb szám az ujTomb-ben: "+legkisebb);
         //7.többszöröse-e
         if ( ujTomb[ujTombdb-1]%ujTomb[0] == 0) {
             System.out.println("\nAz ujTomb legnagyobb eleme a legkisebb elemének a többszöröse");
