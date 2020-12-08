@@ -1,18 +1,11 @@
-/*
-1. Hozz létre két tömböt: szamok1, szamok2 néven!
-2. A tömbök elemszámát is véletlenszám generátorral állítsd elő 10 és 30 között.
-3. Az elemek a -50 és +50 értékta0rtományba essenek.
-4. Írasd ki a két tömböt egy-egy sorban ügyelve, hogy az elemek helyiérték szerint egymás alá kerüljenek.
-5. Helyezd át a két tömb öttel osztható páros számait egy ujTomb nevű tömbbe, majd írasd ki sorbarendezve.
-6. Írasd ki a legkisebb és legnagyobb számot az ujTomb-ből.
-7. Írasd ki, többszöröse-e a legnagyobb szám a legkisebbnek?
-8. Írasd ki, hogy 0-át tartalmaz-e az ujTomb?
-9. Kérdezd meg, szeretné-e újrafuttatni a felhasználó a programot (i/n)! Ha igen, hajrá...
- */
-package osszetett;
-import java.util.Scanner;
-public class Osszetett {
 
+package oszetett0nelkul;
+
+import java.util.Scanner;
+
+public class Oszetett0nelkul {
+
+    
     public static void main(String[] args) {
         System.out.println("\n ÖSSZETETT FELADATSOR");
         Scanner bemenet = new Scanner(System.in);
@@ -47,10 +40,10 @@ public class Osszetett {
         int ujTomb[] = new int[darabszam];
         int ujTombdb = 0;
         for (int i = 0; i < darabszam; i++) {
-            if ((szamok1[i] % 5 == 0) && (szamok1[i]%2==0)&&(szamok1[i]!=0)) {
+            if ((szamok1[i] % 5 == 0) && (szamok1[i]%2==0)) {
                 ujTomb[ujTombdb++] = szamok1[i];
             }
-            if ((szamok2[i] % 5 == 0) && (szamok2[i]%2==0)&&(szamok2[i]!=0)) {
+            if ((szamok2[i] % 5 == 0) && (szamok2[i]%2==0)) {
                 ujTomb[ujTombdb++] = szamok2[i];
             }
 
@@ -90,14 +83,9 @@ public class Osszetett {
         for (int i = 0; i < ujTombdb; i++) {
             if (ujTomb[i] == 0) {
                 System.out.println("\nAz ujTomb 0-t tartalmaz");
-                
-            }
-            else{
-                System.out.println("\nAz ujTomb nem tartalmaz 0-t");
-                break;
+                 break;
             }
         }
-        
         
  //9.Futtatni akarod még 1x?
             System.out.print("\nSzeretné újra lefuttatni a programot? i/n: ");
