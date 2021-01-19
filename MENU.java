@@ -33,7 +33,7 @@ public class MENU {
             System.out.print(szamok[i]+" ");
         }
         //5. Ekkor kérdezd meg a felhasználót, mit szeretne tenni az adatokkal:
-        System.out.println("Írj egy számot mi szeretnél az adatokkal \n");
+        System.out.println("\nÍrj egy számot mi szeretnél az adatokkal \n");
         System.out.println("1 - Összeget számoltatni: tömbök összegét kiíratni");
         System.out.println("2 - Szélsőértékeket kiíratni: legkisebb és legnagyobb értéket kiíratni");
         System.out.println("3 - Van-e benne 40-50: megtudni, tartalmaz-e számot 40 és 50 között?");
@@ -85,15 +85,15 @@ public class MENU {
                 case 4:     //     4 - 5-tel osztható páros számok db-száma: mennyi?
                     int db = 0;
                     for(int i =0;i<20;i++){
-                        if(szamok[i]%5==0){
+                        if(szamok[i]%5==0&&szamok[i]%2==0){
                             db++;
                         }
                     }
                     if(db!=0){
-                        System.out.println("Tartalmaz 5 tel oszthatót, ennyi db-ot: "+db);
+                        System.out.println("Tartalmaz 5-tel osztható páros számot, ennyi db-ot: "+db);
                     }
                     else{
-                        System.out.println("Nem tartalmaz 5 tel osztható számot");
+                        System.out.println("Nem tartalmaz 5-tel osztható páros számot");
                     }
                     break;
                     //code
